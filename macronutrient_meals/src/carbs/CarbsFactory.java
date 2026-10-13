@@ -5,10 +5,10 @@ import java.util.ArrayList;
 import food.*;
 
 public class CarbsFactory extends FoodFactory {
+	// Singleton
 	private static CarbsFactory instance;
 
-	private CarbsFactory() {
-	}
+	private CarbsFactory() {}
 
 	public static CarbsFactory getInstance() {
 		if (instance == null) {
