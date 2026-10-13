@@ -18,18 +18,13 @@ public class CarbsFactory extends FoodFactory {
 	}
 
 	public Carbs getCarbs(String type) {
-		switch (type.toLowerCase()) {
-			case "cheese":
-				return new Cheese();
-			case "bread":
-				return new Bread();
-			case "lentils":
-				return new Lentils();
-			case "pistachio":
-				return new Pistachio();
-			default:
-				return null;
-		}
+        return switch (type.toLowerCase()) {
+            case "cheese" -> new Cheese();
+            case "bread" -> new Bread();
+            case "lentils" -> new Lentils();
+            case "pistachio" -> new Pistachio();
+            default -> null;
+        };
 	}
 
 	@Override

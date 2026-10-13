@@ -18,18 +18,13 @@ public class ProteinFactory extends FoodFactory {
 	}
 
 	public Protein getProtein(String type) {
-		switch (type.toLowerCase()) {
-			case "fish":
-				return new Fish();
-			case "chicken":
-				return new Chicken();
-			case "beef":
-				return new Beef();
-			case "tofu":
-				return new Tofu();
-			default:
-				return null;
-		}
+        return switch (type.toLowerCase()) {
+            case "fish" -> new Fish();
+            case "chicken" -> new Chicken();
+            case "beef" -> new Beef();
+            case "tofu" -> new Tofu();
+            default -> null;
+        };
 	}
 
 	@Override
