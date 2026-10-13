@@ -8,6 +8,8 @@ public abstract class FoodFactory {
 
 	public abstract Food create(String dietPlan);
 
+	protected abstract ArrayList<String> getDietOptions(String dietPlan);
+	
 	protected String selectRandom(ArrayList<String> options) {
 		return options.get(random.nextInt(options.size()));
 	}
